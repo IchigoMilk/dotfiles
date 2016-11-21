@@ -1,6 +1,6 @@
 {
     "HEARTBEAT_TIMEOUT": 120,
-    "IMAGE_ON_TERM": true,
+    "IMAGE_ON_TERM": false,
     "IMAGE_RESIZE_TO_FIT": true,
     "THEME": "monokai",
     "ASCII_ART": true,

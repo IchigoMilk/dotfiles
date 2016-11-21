@@ -140,10 +140,6 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 ########################################
 # エイリアス
-
-alias la='ls -a'
-alias ll='ls -l'
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -175,6 +171,9 @@ fi
 ########################################
 # ls
 alias ls='ls -F --color=auto'
+alias l='ls -a'
+alias la='ls -a'
+alias ll='ls -al'
 
 # git
 alias gs='git status'
@@ -184,12 +183,14 @@ alias gl='git log'
 
 # zsh
 alias sz='source ~/.zshrc'
+alias gr='grep -rl'
+alias s='sudo'
 
 # network
 alias nw='honoka-wireless-network-local.sh'
 
-# x
-alias x='startx'
+# network/x
+alias x='honoka-wireless-network-local.sh; startx'
 
 # pacman
 alias pac='pacman'
@@ -207,3 +208,6 @@ eval "$(rbenv init -)"
 # export PATH="$HOME/.rbenv/versions/2.2.3/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# h8 env
+export PATH="$HOME/Work/h8/tools/bin:$PATH"
