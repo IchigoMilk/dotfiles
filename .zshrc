@@ -170,9 +170,8 @@ fi
 
 ########################################
 # ls
-alias ls='ls -F --color=auto'
 alias l='ls -a'
-alias la='ls -a'
+alias ls='ls -F --color=auto'
 alias ll='ls -al'
 
 # git
@@ -194,6 +193,32 @@ alias x='honoka-wireless-network-local.sh; startx'
 
 # pacman
 alias pac='pacman'
+
+# alerm
+function alerm() {
+  help() {
+    echo 'alerm [SECONDS]'
+    return
+  }
+  case $1 in
+    -h|--help)
+      help
+      return
+      ;;
+    <0-86400> )
+      sleep $1
+      vol=`amixer -c 0 get Master | awk -F '[ ]' '/[0-9]+%/ {print $5}'`
+      amixer -c 0 set Master 127
+      cvlc $HOME/Audio/alerm/alert5.mp3 -R
+      amixer -c 0 set Master $vol
+      return
+      ;;
+    *)
+      return
+      ;;
+  esac
+}
+
 ########################################
 # env
 export LANG=en_US.UTF-8
