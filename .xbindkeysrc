@@ -83,3 +83,7 @@
 "amixer -c 0 set Master 0"
     m:0x0 + c:71
     F5
+
+# Increase brightness
+"amixer -c 0 set Master 0"
+    F9

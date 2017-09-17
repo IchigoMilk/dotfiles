@@ -42,14 +42,19 @@ export XMODIFIERS="@im=fcitx"
 fcitx &
 
 # wallpaper
-feh --bg-center /home/honoka/Picture/wallpaper/Serial_Experiments_Lain_anime_series_cyberpunk_horror_sci_fi_drama_1sel_1920x1080.jpg &
+# feh --bg-center /home/honoka/Picture/wallpaper/Serial_Experiments_Lain_anime_series_cyberpunk_horror_sci_fi_drama_1sel_1920x1080.jpg &
+# feh --bg-center /home/honoka/Picture/wallpaper/19736_serial_experiments_lain.jpg &
+feh --bg-center /home/honoka/Picture/wallpaper/horizon_1649.png
 
 # screensaver
 xset dpms; xset s off
 
+# fix Java GUI
+wmname LG3D
+
 # xmonad
 xsetroot -curser_name left_ptr
-setxkbmap -layout jp
+setxkbmap -layout us
 xmobar &
 xbindkeys &
 exec xmonad

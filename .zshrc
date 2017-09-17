@@ -31,6 +31,12 @@ bindkey -e
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"   beginning-of-buffer-or-history
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
 
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
+bindkey ";5A" beginning-of-line
+bindkey ";5B" end-of-line
+bindkey ";6D" backward-kill-word
+
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
@@ -194,6 +200,12 @@ alias x='honoka-wireless-network-local.sh; startx'
 # pacman
 alias pac='pacman'
 
+# pacman
+alias br='sudo tee /sys/class/backlight/intel_backlight/brightness <<<'
+
+# systemctl
+alias sc='systemctl'
+
 # alerm
 function alerm() {
   help() {
@@ -236,3 +248,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # h8 env
 export PATH="$HOME/Work/h8/tools/bin:$PATH"
+
+# boot vbox usb subsystem
+VBOX_USB=usbfs

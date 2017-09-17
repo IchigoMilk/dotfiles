@@ -15,15 +15,15 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Network "wlo1" ["-L","0","-H","32",
+       , commands = [ Run Network "wlp3s0" ["-L","0","-H","32",
                                           "--normal","green","--high","red",
                                           "--minwidth", "3"] 10
+		    , Run Volume "default" "Master" [] 1
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","green","--high","red",
                                "--ppad", "3"] 10
                     , Run Memory ["-t","Mem: <usedratio>%", "--ppad", "3"] 10
-                    , Run Volume "default" "Master" ["--ppad", "3"] 1
- 		                , Run BatteryP ["BAT0"]
+                    , Run BatteryP ["BAT0", "BAT1"]
               			   ["-t", "<acstatus> <left>% <timeleft>",
                			    "-L", "10", "-H", "80", "--ppad", "3",
                			    "--", "-O", "<fc=green>On</fc> - ", "-i", "",
@@ -35,6 +35,6 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% | %wlo1% | %default:Master% }\
+       , template = "%cpu% | %memory% | %wlp3s0% | %default:Master% }\
                     \{ <fc=#ee9a00>%date%</fc> | %battery% | %uname%"
        }
