@@ -41,10 +41,13 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 fcitx &
 
+# be quiet
+amixer set Master 0%
+
 # wallpaper
-# feh --bg-center /home/honoka/Picture/wallpaper/Serial_Experiments_Lain_anime_series_cyberpunk_horror_sci_fi_drama_1sel_1920x1080.jpg &
-# feh --bg-center /home/honoka/Picture/wallpaper/19736_serial_experiments_lain.jpg &
-feh --bg-center /home/honoka/Picture/wallpaper/horizon_1649.png
+# feh --bg-center /home/honoka/picture/wallpaper/Serial_Experiments_Lain_anime_series_cyberpunk_horror_sci_fi_drama_1sel_1920x1080.jpg &
+# feh --bg-center /home/honoka/picture/wallpaper/19736_serial_experiments_lain.jpg &
+feh --bg-center /home/honoka/picture/wallpaper/horizon_1649.png
 
 # screensaver
 xset dpms; xset s off

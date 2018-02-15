@@ -236,7 +236,7 @@ function alerm() {
 export LANG=en_US.UTF-8
 export EDITOR=gvim
 # export PATH=$PATH:$HOME/node_modules/.bin
-export PATH="$HOME/Scripts:$PATH"
+export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 
 # ruby environment
@@ -251,3 +251,7 @@ export PATH="$HOME/Work/h8/tools/bin:$PATH"
 
 # boot vbox usb subsystem
 VBOX_USB=usbfs
+
+# java font options
+_JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
+

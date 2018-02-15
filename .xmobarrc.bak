@@ -18,6 +18,7 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
        , commands = [ Run Network "wlp3s0" ["-L","0","-H","32",
                                           "--normal","green","--high","red",
                                           "--minwidth", "3"] 10
+		    , Run Volume "default" "Master" [] 1
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","green","--high","red",
                                "--ppad", "3"] 10
