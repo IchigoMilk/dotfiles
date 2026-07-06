@@ -1,0 +1,75 @@
+# Git aliases - included by setup.sh via: git config --global include.path
+# These are usable as: git <alias>  (e.g. git st, git sw main)
+
+[alias]
+    # Status
+    s    = status -s
+    st   = status
+
+    # Add
+    a    = add
+    aa   = add --all
+    ap   = add -p
+
+    # Commit
+    ci   = commit
+    cm   = commit -m
+    ca   = commit --amend
+    cane = commit --amend --no-edit
+
+    # Diff
+    d    = diff
+    ds   = diff --staged
+    dw   = diff --word-diff
+
+    # Log
+    l    = log --oneline --graph --decorate
+    la   = log --oneline --graph --decorate --all
+    ll   = log --oneline --graph --decorate -20
+    last = log -1 HEAD --stat
+    who  = shortlog -s --no-merges
+
+    # Push / Pull / Fetch
+    p    = push
+    pf   = push --force-with-lease
+    pl   = pull
+    f    = fetch
+    fa   = fetch --all --prune
+
+    # Branch
+    br   = branch
+    bra  = branch -a
+    brd  = branch -d
+
+    # Checkout / Switch
+    co   = checkout
+    cob  = checkout -b
+    sw   = switch
+    swc  = switch -c
+
+    # Stash
+    ss   = stash
+    ssp  = stash pop
+    ssl  = stash list
+    ssw  = stash show -p
+
+    # Rebase
+    rb   = rebase
+    rbi  = rebase -i
+    rba  = rebase --abort
+    rbc  = rebase --continue
+
+    # Restore / Reset
+    rs   = restore
+    rss  = restore --staged
+    undo = reset HEAD~1 --mixed
+
+    # Merge
+    m    = merge
+
+    # Remote
+    rv   = remote -v
+
+    # Misc
+    cp   = cherry-pick
+    aliases = config --get-regexp alias
