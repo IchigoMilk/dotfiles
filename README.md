@@ -63,6 +63,13 @@ After setup, connect with:
 minicom beagleboard
 ```
 
+One-action shortcut (setup + connect):
+
+```bash
+source ~/.bashrc   # or: source ~/.zshrc
+bbm
+```
+
 Environment variables can override defaults:
 `MINICOM_DEVICE`, `MINICOM_BAUD`, `MINICOM_PROFILE`, `MINICOM_LOG_DIR`,
 `MINICOM_LOG_FILE`.

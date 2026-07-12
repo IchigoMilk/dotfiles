@@ -66,3 +66,17 @@ alias egrep='egrep --color=auto'
 
 # --- Misc --------------------------------------------------------------------
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# --- BeagleBoard / minicom ---------------------------------------------------
+bbminicom() {
+    local profile="${MINICOM_PROFILE:-beagleboard}"
+    local setup_script="$HOME/dotfiles/setup-minicom-beagleboard.sh"
+
+    if [ ! -x "$setup_script" ]; then
+        echo "error: setup script not found: $setup_script" >&2
+        return 1
+    fi
+
+    bash "$setup_script" && minicom "$profile"
+}
+alias bbm='bbminicom'
