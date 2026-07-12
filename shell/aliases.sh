@@ -77,6 +77,6 @@ bbminicom() {
         return 1
     fi
 
-    bash "$setup_script" && minicom "$profile"
+    bash "$setup_script" && sudo -E minicom "$profile"
 }
 alias bbm='bbminicom'

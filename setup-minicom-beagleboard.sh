@@ -39,7 +39,6 @@ pu xonxoff          No
 pu localecho        No
 pu linewrap         Yes
 pu addcarreturn     No
-pu logfile          YES
 pu logfname         $LOG_FILE
 EOF
 
