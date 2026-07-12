@@ -52,7 +52,7 @@ bash setup-minicom-beagleboard.sh
 
 It creates `~/.minirc.beagleboard` with:
 
-- device: `/dev/ttyUSB0`
+- device: `/dev/ttyUSB1`
 - baud rate: `115200`
 - 8N1 / no flow control
 - logfile: `~/.local/state/minicom/beagleboard-YYYYmmdd-HHMMSS.log`

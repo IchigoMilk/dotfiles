@@ -5,7 +5,7 @@
 set -euo pipefail
 
 PROFILE="${MINICOM_PROFILE:-beagleboard}"
-DEVICE="${MINICOM_DEVICE:-/dev/ttyUSB0}"
+DEVICE="${MINICOM_DEVICE:-/dev/ttyUSB1}"
 BAUDRATE="${MINICOM_BAUD:-115200}"
 STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}"
 LOG_DIR="${MINICOM_LOG_DIR:-$STATE_DIR/minicom}"
