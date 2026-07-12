@@ -41,6 +41,39 @@ Create `~/.bashrc.local` or `~/.zshrc.local` for settings that should not be
 tracked (e.g. work-specific paths, secrets). These files are sourced at the end
 of the respective rc file if they exist.
 
+## BeagleBoard serial (minicom)
+
+Use the setup script to create a dedicated minicom profile with UART defaults
+and logging enabled:
+
+```bash
+bash setup-minicom-beagleboard.sh
+```
+
+It creates `~/.minirc.beagleboard` with:
+
+- device: `/dev/ttyUSB0`
+- baud rate: `115200`
+- 8N1 / no flow control
+- logfile: `~/.local/state/minicom/beagleboard-YYYYmmdd-HHMMSS.log`
+
+After setup, connect with:
+
+```bash
+minicom beagleboard
+```
+
+One-action shortcut (setup + connect):
+
+```bash
+source ~/.bashrc   # or: source ~/.zshrc
+bbm
+```
+
+Environment variables can override defaults:
+`MINICOM_DEVICE`, `MINICOM_BAUD`, `MINICOM_PROFILE`, `MINICOM_LOG_DIR`,
+`MINICOM_LOG_FILE`.
+
 ## Notable git aliases
 
 | alias | command |
