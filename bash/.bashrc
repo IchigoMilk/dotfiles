@@ -72,6 +72,16 @@ DOTFILES_DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.."
 unset DOTFILES_DIR
 
 # =============================================================================
+# Access tokens (machine-specific, not tracked — see shell/tokens.sh.example)
+# =============================================================================
+[ -f "$HOME/.bashrc.tokens" ] && . "$HOME/.bashrc.tokens"
+
+# =============================================================================
 # Local overrides (machine-specific, not tracked)
 # =============================================================================
 [ -f "$HOME/.bashrc.local" ] && . "$HOME/.bashrc.local"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+[[ -r "$HOME/.grok/completions/bash/grok.bash" ]] && source "$HOME/.grok/completions/bash/grok.bash"
+# <<< grok installer <<<

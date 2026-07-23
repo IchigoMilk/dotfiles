@@ -1,0 +1,18 @@
+# =============================================================================
+# Access tokens — template
+#
+# Usage:
+#   cp shell/tokens.sh.example ~/.bashrc.tokens
+#   chmod 600 ~/.bashrc.tokens
+#   $EDITOR ~/.bashrc.tokens   # fill in the real token values
+#
+# ~/.bashrc.tokens lives outside this repo (directly under $HOME), so it is
+# never tracked by git. bash/.bashrc sources it automatically if present.
+# =============================================================================
+
+# Hugging Face
+export HF_TOKEN="xxxxxxxx"
+
+# Add more tokens below as needed, e.g.:
+# export OPENAI_API_KEY="xxxxxxxx"
+# export GITHUB_TOKEN="xxxxxxxx"
