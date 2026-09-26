@@ -57,7 +57,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lt='ls -alFt'      # sort by modification time
+alias lllt=lt
 alias ltr='ls -alFtr'    # sort by modification time, reverse
+alias llltr=ltr
 
 # --- Grep --------------------------------------------------------------------
 alias grep='grep --color=auto'
